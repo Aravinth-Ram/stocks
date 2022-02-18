@@ -1,0 +1,30 @@
+.StockTicker{
+    display: flex;
+    flex-direction: column;
+    width: 11em;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.StockTitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Stock{
+    display: flex;
+    align-items: flex-end;
+    font-size: large;
+}
+
+.ProfitStock{
+    color: lightgreen;
+}
+
+.LossStock{
+    color: red;
+}
+
+.StockValue{
+    font-size: small;
+}
