@@ -7,9 +7,11 @@ import Header from './Components/Header';
 function App() {
   return (
     <div className="App">
-        <AppBar position="fixed">
-          <Toolbar id="AppToolBar"><Header /></Toolbar>
-        </AppBar>
+      <AppBar position="fixed">
+        <Toolbar id="AppToolBar">
+          <Header />
+        </Toolbar>
+      </AppBar>
       <Dashboard />
     </div>
   );

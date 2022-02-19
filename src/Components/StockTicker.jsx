@@ -5,20 +5,20 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function StockTicker(props) {
 
-    return <div className="StockTicker">
+    return <div className="StockTicker" key={props.index}>
         <div className="StockTitle">
             <div>{props.stockTicker.displayName}</div>
-            <div>{props.stockTicker.prevClose}</div>
+            <div className="StockPrevClose">{props.stockTicker.prevClose}</div>
         </div>
         <div className="Stock">
             {
                 (((props.stockTicker.price - props.stockTicker.prevClose) / props.stockTicker.price) * 100) > 0 ?
                     [<div className="ProfitStock">
-                        <KeyboardArrowUpIcon /> {(((props.stockTicker.price - props.stockTicker.prevClose) / props.stockTicker.price) * 100).toFixed(2)} % <span className="StockValue">({(props.stockTicker.price - props.stockTicker.prevClose).toFixed(2)})</span>
+                        <KeyboardArrowUpIcon /> <div>{(((props.stockTicker.price - props.stockTicker.prevClose) / props.stockTicker.price) * 100).toFixed(2)} % <span className="StockValue">({(props.stockTicker.price - props.stockTicker.prevClose).toFixed(2)})</span></div>
                     </div>]
                     :
                     <div className="LossStock">
-                        <KeyboardArrowDownIcon /> {(((props.stockTicker.price - props.stockTicker.prevClose) / props.stockTicker.price) * 100).toFixed(2)} % <span className="StockValue">({(props.stockTicker.price - props.stockTicker.prevClose).toFixed(2)})</span>
+                        <KeyboardArrowDownIcon /> <div>{(((props.stockTicker.price - props.stockTicker.prevClose) / props.stockTicker.price) * 100).toFixed(2)} % <span className="StockValue">({(props.stockTicker.price - props.stockTicker.prevClose).toFixed(2)})</span></div>
                     </div>
             }
         </div>

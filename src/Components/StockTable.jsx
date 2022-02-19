@@ -26,7 +26,6 @@ export default function StockTable(props) {
     const classes = useStyles();
 
     return <div className="StockNameAndTable">
-
         <div className="StockName">
             <div>{props.stockTicker[0]} </div>
         </div>
